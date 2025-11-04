@@ -5,7 +5,8 @@ const Projects = () => {
   const projects = [
     {
       title: "E-commerce Moderno",
-      description: "Plataforma de e-commerce completa com carrinho de compras, sistema de pagamento e painel administrativo.",
+      description:
+        "Plataforma de e-commerce completa com carrinho de compras, sistema de pagamento e painel administrativo.",
       image: "/placeholder.svg",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Stripe"],
       liveLink: "#",
@@ -13,7 +14,8 @@ const Projects = () => {
     },
     {
       title: "Dashboard Analytics",
-      description: "Dashboard interativo para visualização de dados com gráficos em tempo real e relatórios customizados.",
+      description:
+        "Dashboard interativo para visualização de dados com gráficos em tempo real e relatórios customizados.",
       image: "/placeholder.svg",
       technologies: ["React", "TypeScript", "Recharts", "TanStack Query"],
       liveLink: "#",
@@ -21,15 +23,18 @@ const Projects = () => {
     },
     {
       title: "App de Tarefas",
-      description: "Aplicativo de gerenciamento de tarefas com drag-and-drop, categorias e sistema de prioridades.",
+      description:
+        "Aplicativo de gerenciamento de tarefas com drag-and-drop, categorias e sistema de prioridades.",
       image: "/placeholder.svg",
       technologies: ["React", "TypeScript", "DnD Kit", "Local Storage"],
-      liveLink: "#",
-      codeLink: "#",
+      liveLink: "https://lista-de-tarefas-com-filtragem-zskx.vercel.app/",
+      codeLink:
+        "https://github.com/YogoCastro/Lista-de-tarefas-com-filtragem/tree/main",
     },
     {
       title: "Landing Page SaaS",
-      description: "Landing page moderna para produto SaaS com animações suaves e design responsivo.",
+      description:
+        "Landing page moderna para produto SaaS com animações suaves e design responsivo.",
       image: "/placeholder.svg",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       liveLink: "#",
@@ -37,7 +42,8 @@ const Projects = () => {
     },
     {
       title: "Blog Pessoal",
-      description: "Blog com sistema de posts, categorias, busca e comentários, com interface limpa e legível.",
+      description:
+        "Blog com sistema de posts, categorias, busca e comentários, com interface limpa e legível.",
       image: "/placeholder.svg",
       technologies: ["React", "TypeScript", "Markdown", "SEO"],
       liveLink: "#",
@@ -45,7 +51,8 @@ const Projects = () => {
     },
     {
       title: "Portfolio Website",
-      description: "Website de portfólio responsivo e acessível com animações e otimização de performance.",
+      description:
+        "Website de portfólio responsivo e acessível com animações e otimização de performance.",
       image: "/placeholder.svg",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       liveLink: "#",
@@ -74,8 +81,12 @@ const Projects = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
@@ -93,7 +104,11 @@ const Projects = () => {
                     className="flex-1 border-primary text-primary hover:bg-primary/10"
                     asChild
                   >
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Demo
                     </a>
@@ -104,7 +119,11 @@ const Projects = () => {
                     className="flex-1"
                     asChild
                   >
-                    <a href={project.codeLink} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="h-4 w-4 mr-2" />
                       Código
                     </a>

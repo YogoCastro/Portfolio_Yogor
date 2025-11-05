@@ -7,56 +7,38 @@ const Projects = () => {
       title: "E-commerce Moderno",
       description:
         "Plataforma de e-commerce completa com carrinho de compras, sistema de pagamento e painel administrativo.",
-      image: "/placeholder.svg",
+      image: "/tech.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Stripe"],
-      liveLink: "#",
-      codeLink: "#",
+      liveLink: "https://e-commerce-xi-eight-72.vercel.app/",
+      codeLink: "https://github.com/YogoCastro/E-commerce.git",
     },
     {
       title: "Dashboard Analytics",
       description:
         "Dashboard interativo para visualização de dados com gráficos em tempo real e relatórios customizados.",
-      image: "/placeholder.svg",
+      image: "/dashboardd.png",
       technologies: ["React", "TypeScript", "Recharts", "TanStack Query"],
-      liveLink: "#",
-      codeLink: "#",
+      liveLink: "https://dashboard-project-green.vercel.app/",
+      codeLink: "https://github.com/YogoCastro/Dashboard_project.git",
     },
     {
       title: "App de Tarefas",
       description:
         "Aplicativo de gerenciamento de tarefas com drag-and-drop, categorias e sistema de prioridades.",
-      image: "/placeholder.svg",
+      image: "/imagep.png",
       technologies: ["React", "TypeScript", "DnD Kit", "Local Storage"],
       liveLink: "https://lista-de-tarefas-com-filtragem-zskx.vercel.app/",
       codeLink:
         "https://github.com/YogoCastro/Lista-de-tarefas-com-filtragem/tree/main",
     },
     {
-      title: "Landing Page SaaS",
-      description:
-        "Landing page moderna para produto SaaS com animações suaves e design responsivo.",
-      image: "/placeholder.svg",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      liveLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Blog Pessoal",
-      description:
-        "Blog com sistema de posts, categorias, busca e comentários, com interface limpa e legível.",
-      image: "/placeholder.svg",
-      technologies: ["React", "TypeScript", "Markdown", "SEO"],
-      liveLink: "#",
-      codeLink: "#",
-    },
-    {
       title: "Portfolio Website",
       description:
         "Website de portfólio responsivo e acessível com animações e otimização de performance.",
-      image: "/placeholder.svg",
+      image: "/eu.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      liveLink: "#",
-      codeLink: "#",
+      liveLink: "https://portfolio-yogor.vercel.app/",
+      codeLink: "https://github.com/YogoCastro/Portfolio_Yogor.git",
     },
   ];
 

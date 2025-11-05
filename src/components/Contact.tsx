@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,14 +15,33 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Validação simples
+
     if (!formData.name || !formData.email || !formData.message) {
       toast.error("Por favor, preencha todos os campos");
       return;
     }
-    // Aqui você pode integrar com um serviço de email
-    toast.success("Mensagem enviada com sucesso! Entrarei em contato em breve.");
-    setFormData({ name: "", email: "", message: "" });
+
+    // 🚀 Enviar com EmailJS
+    emailjs
+      .send(
+        "service_u1ypk2l", // substitua aqui
+        "template_nod0yyr", // substitua aqui
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "fs5chxdPrgCaPNPgc" // substitua aqui
+      )
+      .then(() => {
+        toast.success(
+          "Mensagem enviada com sucesso! Entrarei em contato em breve."
+        );
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch(() => {
+        toast.error("Erro ao enviar mensagem. Tente novamente mais tarde.");
+      });
   };
 
   const socialLinks = [
@@ -57,8 +77,9 @@ const Contact = () => {
           <div className="animate-slide-in-right">
             <h3 className="text-2xl font-semibold mb-4">Vamos conversar!</h3>
             <p className="text-muted-foreground mb-8">
-              Estou sempre aberto a novos projetos, oportunidades de colaboração ou apenas para 
-              trocar ideias sobre desenvolvimento web. Sinta-se à vontade para entrar em contato!
+              Estou sempre aberto a novos projetos, oportunidades de colaboração
+              ou apenas para trocar ideias sobre desenvolvimento web. Sinta-se à
+              vontade para entrar em contato!
             </p>
             <div className="space-y-4">
               {socialLinks.map((link, index) => (
@@ -82,7 +103,9 @@ const Contact = () => {
                   type="text"
                   placeholder="Seu nome"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   className="w-full"
                   required
                 />
@@ -92,7 +115,9 @@ const Contact = () => {
                   type="email"
                   placeholder="Seu e-mail"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   className="w-full"
                   required
                 />
@@ -101,7 +126,9 @@ const Contact = () => {
                 <Textarea
                   placeholder="Sua mensagem"
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   className="w-full min-h-[150px]"
                   required
                 />
